@@ -5,6 +5,6 @@
      (recur (cons (+ (first x) (first (rest x))) x) n)
      (rest x))))
 
-(defn euler002 [x] (reduce + 0 (filter even? (fibto x))))
+(defn euler002 [x] (->> (fibto x) (filter even?) (reduce +)))
 
 (println (euler002 4000000))
