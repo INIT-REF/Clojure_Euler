@@ -5,6 +5,6 @@
   ([n, tmp, rev]
    (if (= 0 tmp)
      (= rev n)
-     (ispal n (quot tmp 10) (+ (rem tmp 10) (* rev 10))))))
+     (recur n (quot tmp 10) (+ (rem tmp 10) (* rev 10))))))
 
 (println (apply max (filter ispal prods)))
