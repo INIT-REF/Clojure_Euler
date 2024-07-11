@@ -7,4 +7,4 @@
      (= rev n)
      (recur n (quot tmp 10) (+ (rem tmp 10) (* rev 10))))))
 
-(println (->> prods (filter ispal) (apply max)))
+(println (->> prods (filter ispal) (reduce max)))
