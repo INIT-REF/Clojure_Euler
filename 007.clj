@@ -11,4 +11,4 @@
 
 (defn primes [limit] (->> (range 0 (inc limit)) (map #(if %1 %2) (SoE limit)) (remove nil?)))
 
-(println (nth (primes 114500) 10000)
+(println (nth (primes 114500) 10000))
