@@ -9,7 +9,7 @@
 
 (defn euler008
   ([] (euler008 number 0))
-  ([n, maxprod]
+  ([n maxprod]
    (if (= 0 n)
      maxprod
      (let [prod (dprod (rem n 10000000000000))]
